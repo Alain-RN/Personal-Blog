@@ -5,10 +5,12 @@ import HiddenIcon from "./Form/FormAssets/hidden.png";
 
 
 function App() {
+<<<<<<< HEAD
 
   return (
     <div className="App d-flex align-items-center justify-content-center">
       <Login srcImage={ProfilIcon} viewIcon={ViewIcon} hiddenIcon={HiddenIcon}></Login>
+
     </div>
   );
 }
