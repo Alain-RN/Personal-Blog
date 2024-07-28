@@ -4,7 +4,7 @@ import Button from './Components/Button'
 import { useState } from 'react'
 
 
-function Login({srcImageProfil, viewIcon, hiddenIcon}) {
+function Login({srcImageProfil, viewIcon, hiddenIcon, onClick}) {
 
     const [view, setView] = useState(true)
 
@@ -46,7 +46,7 @@ function Login({srcImageProfil, viewIcon, hiddenIcon}) {
 
                 <p className='text-center my-3'>- or -</p>
 
-                <p className='text-center endText'>Create an <spam className="text-primary ">Account</spam></p>
+                <p className='text-center endText'>Create an <spam className="text-primary" onClick={onClick}>Account</spam></p>
 
         </div>
     </div>

@@ -7,6 +7,9 @@ body, .App{
 .maxWidth {
     height: 100%;
 }
+.carouselField {
+    height: 100vh;
+}
 
 .profilCircle {
     width: 110px;
@@ -62,3 +65,4 @@ label {
 .endText {
     font-size: 14px;
 }
+  

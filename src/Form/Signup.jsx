@@ -4,7 +4,7 @@ import Button from './Components/Button'
 import React from 'react'
 import { useState } from 'react'
 
-function Signup({srcImageAddUser, viewIcon, hiddenIcon}) {
+function Signup({srcImageAddUser, viewIcon, hiddenIcon , onClick}) {
 
     const [view, setView] = useState(true)
 
@@ -13,7 +13,7 @@ function Signup({srcImageAddUser, viewIcon, hiddenIcon}) {
     }
 
   return (
-    <div className='text-white signupField d-flex justify-content-center'>
+    <div className='text-white signupField d-flex justify-content-center signup-active'>
         {/* Add-Profil-Icon */}
         <div className='profilCircle d-flex align-items-center justify-content-center'>
             <img src={srcImageAddUser} alt="" className='AddUserIcon'/>
@@ -48,7 +48,7 @@ function Signup({srcImageAddUser, viewIcon, hiddenIcon}) {
 
                 <p className='text-center my-3'>- or -</p>
 
-                <p className='text-center endText'>Already have an account?  <spam className="text-primary ">Sign in here</spam></p>
+                <p className='text-center endText'>Already have an account? <spam className="text-primary" onClick={onClick}>Sign in here</spam></p>
 
         </div>
     </div>
