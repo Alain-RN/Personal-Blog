@@ -1,0 +1,20 @@
+.Profil {
+    position: absolute;
+    height: 94vh;
+    width: 18%;
+    margin: 3vh;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+.Navbar {
+    height: 80px;
+    width: 78%;
+    margin-top: 3vh;
+    margin-left: 21%;
+    border-radius: 10px;
+}
