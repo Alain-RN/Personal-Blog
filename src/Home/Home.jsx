@@ -1,13 +1,13 @@
 import React from 'react'
-import Profil from './Profil/Profil'
+import LeftBar from './NavBar/LeftBar'
 import NavBar  from './NavBar/NavBar'
 import "./home.css"
 
 function Home() {
   return (
-    <div className='d-flex'>
+    <div className='Home'>
         <NavBar></NavBar>
-        <Profil></Profil>
+        <LeftBar></LeftBar>
     </div>
   )
 }
