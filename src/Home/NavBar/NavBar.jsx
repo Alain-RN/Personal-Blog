@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
+import DropDown from './dropDown/DropDown'
 
-function NavBar({profil,notification,search,logo}) {
+function NavBar({profil ,notification ,search ,logo ,down }) {
+
   return (
     
     <div className='Navbar bg-dark text-primary d-flex align-items-center'>
@@ -26,12 +28,25 @@ function NavBar({profil,notification,search,logo}) {
       {/* Profil and Notification */} 
       <div className='p_n d-flex'>
 
-        <div className="notification cercle d-flex align-items-center justify-content-center">
-            <img src={notification} alt="" className='w-50'/>
+        <div className='dropdownNotification'>
+
+         <div className="notification cercle d-flex align-items-center justify-content-center">
+              <img src={notification} alt="" className='w-50'/>
+          </div>
+
+          <DropDown/>
+
         </div>
 
-        <div className="profil cercle d-flex align-items-center justify-content-center">
-            <img src={profil} alt="" className='w-75'/>
+        <div className='dropdownProfil'>
+
+          <div className="profil cercle d-flex align-items-center justify-content-center">
+              <img src={profil} alt="" className='profil w-75'/>
+              <img src= {down} alt="" className='down'/>
+          </div>
+
+          <DropDown/>
+
         </div>
 
       </div>

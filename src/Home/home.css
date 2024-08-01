@@ -3,7 +3,6 @@
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    padding: 15px;
 }
 .logo_search {
     gap: 30px;
@@ -11,10 +10,9 @@
 .Navbar {
     height: 80px;
     width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
     padding-inline : 30px;
     justify-content: space-between;
+    z-index: 2;
 }
 .search {
     width: 25vw;
@@ -41,6 +39,29 @@
     transition: 0.6s ease;
 }
 
+.down {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 16px;
+    border-radius: 50%;
+    background:#0d6efd ;
+}
+
+
+/* DropDown */
+.dropDown {
+    width: 300px;
+    transition: 0.4s ease;
+    top: 60px;
+    right: -30px;
+    position: absolute;
+}
+h1{
+    top: 20px;
+    text-align: center;
+}
+
 
 .cercle {
     width: 44px;
@@ -49,18 +70,27 @@
     background-color: #D3D3D3;
     display: inline;
     transition: 0.6s ease;
+
 }
 .cercle:hover{
     filter: drop-shadow(0px 0px 12px #0d6efd);
-    background-color: #0d6dfd4c;
+    background-color: #0d6dfd80;
+
 }
 .p_n {
-    gap : 16px
+    gap : 16px;
+    position: relative;
 }
+
 
 .LeftBar {
     height: 100%;
-    width: 320px;
+    width: 300px;
     border-radius: 10px;
+    text-align: center;
+}
+.HomeBody{
+    height: 100%;
+    margin: 16px;
 }
 
