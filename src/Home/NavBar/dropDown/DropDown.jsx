@@ -1,9 +1,10 @@
-import React from 'react'
 
-function DropDown() {
+
+function DropDown({style, section}) {
   return (
-    <div className='dropDown bg-dark text-primary'>
-        <h1>Dropdown</h1>
+    <div className='dropDown bg-dark text-primary' style={style}>
+        <h1>{section}</h1>
+        <button type="button">{section}</button>
     </div>
   )
 }

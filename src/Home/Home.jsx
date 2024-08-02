@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
 import LeftBar from './NavBar/LeftBar'
 import NavBar  from './NavBar/NavBar'
-import DropDown from './NavBar/dropDown/DropDown'
 import "./home.css"
+import { useState } from 'react'
 
 // Icon
 import Profil from './HomeAssets/person.png'
@@ -12,12 +11,34 @@ import Logo from './HomeAssets/burn.png'
 import Down from './HomeAssets/down.png'
 
 
+
+
 function Home() {
 
-  return (
-    <div className='Home'>
-        <NavBar 
+  const [dropDownProfil, setDropDownProfil] = useState(false)
+  const [dropDownNotif, setDropDownNotif] = useState(false)
 
+  const handleDropDownProfil = () => {
+    setDropDownProfil(!dropDownProfil)
+    setDropDownNotif(false)
+  }
+  const handleDropDownNotif = () => {
+    setDropDownNotif(!dropDownNotif)
+    setDropDownProfil(false)
+  }
+
+
+  const handleDropDownClose = () => {
+    setDropDownNotif(false)
+    setDropDownProfil(false)
+  }
+  return (
+    <div className='Home' >
+        <NavBar 
+          dropDownProfil = {dropDownProfil}
+          dropDownNotif ={dropDownNotif}
+          handleDropDownNotif={handleDropDownNotif}
+          handleDropDownProfil ={handleDropDownProfil}
           profil={Profil} 
           notification={Notification}
           search = {Search}

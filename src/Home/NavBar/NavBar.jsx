@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import DropDown from './dropDown/DropDown'
 
-function NavBar({profil ,notification ,search ,logo ,down }) {
+function NavBar({profil ,notification ,search ,logo ,down,handleDropDownClose, handleDropDownNotif,handleDropDownProfil , dropDownProfil, dropDownNotif}) {
+
 
   return (
-    
-    <div className='Navbar bg-dark text-primary d-flex align-items-center'>
+    <div>
+    <div onClick={handleDropDownClose}  className='Navbar bg-dark text-primary d-flex align-items-center'>
       
       {/* Logo and Search Bar */}
       <div className="logo_search d-flex align-items-center">
@@ -28,29 +29,31 @@ function NavBar({profil ,notification ,search ,logo ,down }) {
       {/* Profil and Notification */} 
       <div className='p_n d-flex'>
 
-        <div className='dropdownNotification'>
+        <div className='dropDownNotification'>
 
-         <div className="notification cercle d-flex align-items-center justify-content-center">
+         <div onClick={handleDropDownNotif} className="notification cercle d-flex align-items-center justify-content-center">
               <img src={notification} alt="" className='w-50'/>
           </div>
 
-          <DropDown/>
+          <DropDown section="Notification" style={!dropDownNotif?{transform:'translateY(-502px)',zIndex: "-1"}:{transform:'translateY(6px)'}}/>
 
         </div>
 
-        <div className='dropdownProfil'>
+        <div className='dropDownProfil'>
 
-          <div className="profil cercle d-flex align-items-center justify-content-center">
+          <div onClick={handleDropDownProfil} className="profil cercle d-flex align-items-center justify-content-center">
               <img src={profil} alt="" className='profil w-75'/>
               <img src= {down} alt="" className='down'/>
           </div>
 
-          <DropDown/>
+          <DropDown section="Profile" style={!dropDownProfil?{transform:'translateY(-502px)',zIndex: "-1"}:{transform:'translateY(6px)'}}/>
 
         </div>
 
       </div>
 
+    </div>
+    
     </div>
   )
 }
