@@ -1,7 +1,4 @@
-import React, { useState } from 'react'
-import DropDown from './dropDown/DropDown'
-
-function NavBar({profil ,notification ,search ,logo ,down, onClickP, onClickN, onClickC}) {
+function NavBar({profil ,notification ,search ,logo ,down, up, onClickP ,onClickN ,onClickC ,dDProfil}) {
 
 
   return (
@@ -40,7 +37,7 @@ function NavBar({profil ,notification ,search ,logo ,down, onClickP, onClickN, o
 
           <div className="profil cercle d-flex align-items-center justify-content-center" onClick={onClickP}>
               <img src={profil} alt="" className='profil w-75'/>
-              <img src= {down} alt="" className='down'/>
+              <img src= {!dDProfil?down:up} alt="" className='updown'/>
           </div>
 
         </div>

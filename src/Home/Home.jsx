@@ -1,6 +1,7 @@
 import LeftBar from './NavBar/LeftBar'
 import NavBar  from './NavBar/NavBar'
 import DropDown from './NavBar/dropDown/DropDown'
+import Post from './NavBar/Post'
 import "./home.css"
 import { useState } from 'react'
 
@@ -10,6 +11,7 @@ import Notification from './HomeAssets/notification-bell.png'
 import Search from './HomeAssets/search-interface-symbol.png'
 import Logo from './HomeAssets/burn.png'
 import Down from './HomeAssets/down.png'
+import up from './HomeAssets/up.png'
 
 
 
@@ -44,12 +46,14 @@ function Home() {
           onClickN={handle['N']}
           onClickP={handle['P']}
           onClickC={handle['C']}
+          dDProfil={dDProfil}
 
           profil={Profil} 
           notification={Notification}
           search = {Search}
           logo= {Logo}
           down = {Down}
+          up = {up}
 
         ></NavBar>
 
@@ -59,9 +63,9 @@ function Home() {
 
             <DropDown section="Profile" value={dDProfil?'translateY(0%)':'translateY(-101%)'}/>
 
-          <div className='LeftCenter' onClick={handle['C']}>
+          <div className='LeftandPost d-flex' onClick={handle['C']}>
             <LeftBar></LeftBar>
-
+            <Post></Post>
           </div>
 
         </div>
