@@ -36,7 +36,6 @@ function Home() {
    
   const handle = {'N' : handleDDNotif, 'P' : handleDDProfil, 'C' : handleDDClose}
 
-
   return (
     <div className='Home' >
 
@@ -53,17 +52,18 @@ function Home() {
           down = {Down}
 
         ></NavBar>
+
         <div className='d-flex HomeBody' >
-          {
-            dDNotif && <DropDown section="Notification"/>
-          }
-          {
-            dDProfil && <DropDown section="Profile"/>
-          }
+            
+            <DropDown section="Notification" value={dDNotif?'translateY(0%)':'translateY(-101%)'}/>
+
+            <DropDown section="Profile" value={dDProfil?'translateY(0%)':'translateY(-101%)'}/>
+
           <div className='LeftCenter' onClick={handle['C']}>
             <LeftBar></LeftBar>
 
           </div>
+
         </div>
 
     </div>
