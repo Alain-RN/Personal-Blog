@@ -15,13 +15,13 @@ function App() {
     setIsLogin(!isLogin)
   }
   return (
-    <div className={"App d-flex align-items-center justify-content-center" && false}>
+    <div className={"App d-flex align-items-center justify-content-center"}>
       {false && ((isLogin)?
         <Login srcImageProfil={ProfilIcon} viewIcon={ViewIcon} hiddenIcon={HiddenIcon} onClick={toggleLogin}></Login>
       :
         <Signup srcImageAddUser={AddUserIcone} viewIcon={ViewIcon} hiddenIcon={HiddenIcon} onClick={toggleLogin}></Signup>
       )}
-      <Home></Home>
+      {<Home></Home>}
     </div>
   );
 }

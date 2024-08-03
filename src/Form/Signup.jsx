@@ -13,7 +13,7 @@ function Signup({srcImageAddUser, viewIcon, hiddenIcon , onClick}) {
     }
 
   return (
-    <div className='text-white signupField d-flex justify-content-center signup-active'>
+    <div className='text-white signupField bg-dark d-flex justify-content-center signup-active'>
         {/* Add-Profil-Icon */}
         <div className='profilCircle d-flex align-items-center justify-content-center'>
             <img src={srcImageAddUser} alt="" className='AddUserIcon'/>

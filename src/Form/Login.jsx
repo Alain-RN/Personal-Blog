@@ -13,7 +13,7 @@ function Login({srcImageProfil, viewIcon, hiddenIcon, onClick}) {
     }
 
   return (
-    <div className='text-white loginField d-flex justify-content-center'>
+    <div className='text-white bg-dark loginField d-flex justify-content-center'>
 
         {/* Profil-Icon */}
         <div className='profilCircle d-flex align-items-center justify-content-center'>
