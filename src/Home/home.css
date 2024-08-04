@@ -115,7 +115,7 @@ h1{
 .post {
     /* position: absolute; */
     width: 75%;
-    scrollbar-width: none;
+    /* scrollbar-width: none; */
 }
 .containerpost{
     height: 0;
