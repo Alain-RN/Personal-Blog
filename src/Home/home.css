@@ -55,7 +55,7 @@
 
 h1{
     top: 20px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .cercle {
@@ -109,12 +109,27 @@ h1{
 
 .containerPost {
     width: 65%;
-    margin-block-start: -12px;
-    margin-bottom: -16px;
+    margin-top: -12px;
+    margin-bottom: -14px;
 }
 .post {
     /* position: absolute; */
     width: 75%;
+    scrollbar-width: none;
+}
+.containerpost{
+    height: 0;
+
+}
+.pos ::-webkit-scrollbar {
+    display: none;
+}
+.publication{
+    width: 92%;
+    margin-inline: auto;
+    border-radius: 10px;
+    margin-block: 24px;
+    padding: 10px;
 }
 
 
