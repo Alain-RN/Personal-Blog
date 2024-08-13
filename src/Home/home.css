@@ -115,21 +115,30 @@ h1{
 .post {
     /* position: absolute; */
     width: 75%;
-    /* scrollbar-width: none; */
+    /* border: 1px solid black; */
+    overflow-y: auto;
 }
 .containerpost{
     height: 0;
 
-}
-.pos ::-webkit-scrollbar {
-    display: none;
 }
 .publication{
     width: 92%;
     margin-inline: auto;
     border-radius: 10px;
     margin-block: 24px;
-    padding: 10px;
+    padding: 24px;
+    background-color: rgba(71, 71, 71, 0.358);
+}
+.imagepub{
+    margin-block: 10px;
+}
+.description{
+    overflow: hidden;
+}
+
+.flouSpan{
+    background:  linear-gradient(to right, rgba(71, 71, 71, 0.032) ,#2e3133,#2e3133,#2e3133,#2e3133);
 }
 
 
