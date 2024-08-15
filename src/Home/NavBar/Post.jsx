@@ -5,10 +5,10 @@ import pubExemple from '../PublicationCard/PostAsset/pubEx.jpg'
 
 function Post() {
   return (
-    <div className='containerPost d-flex justify-content-center '>
+    <div className='containerPost d-flex justify-content-center px-6 '>
       <div className='post bg-dark'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam libero voluptate aperiam veritatis minus tenetur id sequi, maiores mollitia esse.
-        <div className='containerpost' >
+        <div className='allPosts'>
           {/* All pub */}
           <PublicationCard title={"title 1"} picture={pubExemple} description={"Asvbsjb ew w eh sn  dfisfhe"} />
           <PublicationCard title={"title 2"} picture={pubExemple}

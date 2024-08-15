@@ -21,7 +21,7 @@ function PublicationCard({ title, picture, description }) {
   return (
     <div className='publication text-white' >
 
-      <h3 className='title' >Title : {title} {height}</h3>
+      <h3 className='title' >Title : {title}</h3>
 
       <div className="description" onClick={handleChangeMoreOrLess} style={{height:(more)?"21px":"auto"}}>
 
