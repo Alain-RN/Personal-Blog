@@ -1,27 +1,43 @@
 import React, { useEffect, useRef, useState } from 'react'
 
 function PublicationCard({ title, picture, description }) {
-  const Description = useRef(null)
+  const [more, setMore] = useState(true)
+
+  const handleChangeMoreOrLess = () => {
+    setMore(!more)
+  }
+
+  const textDescription = useRef(null)
+  const moreOrLess = useRef(null)
+
   const [height, setHeight] = useState(0)
   useEffect(() => {
     // Vérifie si la référence est définie
-    if (Description.current) {
+    if (textDescription.current) {
       // Récupère la hauteur du div
-      const divHeight = Description.current.clientHeight;
-      setHeight(divHeight);
+      setHeight(textDescription.current.clientHeight);
     }
   }, []);
   return (
-    <div className='publication text-white'>
-      <h2>title :{title}{height}</h2>
-      <div className="description" style={{ position: "relative", textAlign: "justify", height: "24px" }} >
-        {/* <p className='textDescription'></p> */}
-        <p ref={Description}>{description}</p>
-        <div className='flouSpan' style={{ position: "absolute", right: "0", top: "0", zIndex:"2"}}>
-          <span className="" style={{marginLeft:"50px"}}>see more . . .</span>
+    <div className='publication text-white' >
+
+      <h3 className='title' >Title : {title} {height}</h3>
+
+      <div className="description" onClick={handleChangeMoreOrLess} style={{height:(more)?"21px":"auto"}}>
+
+        <div ref={textDescription}>
+          <p className='textDescription'>{description}</p>
         </div>
+
+        {(more) && (height>21) && <div className='flouSpan'>
+          <span className="moreOrLess" ref={moreOrLess} >see more . . .</span>
+        </div>}
+
       </div>
-      <img src={picture} alt="" className='imagepub w-100' />
+
+      <div className='imgContainer'>
+        <img src={picture} alt="" className='imagepub' />
+      </div>
 
     </div>
   )

@@ -1,5 +1,5 @@
 import LeftBar from './NavBar/LeftBar'
-import NavBar  from './NavBar/NavBar'
+import NavBar from './NavBar/NavBar'
 import DropDown from './NavBar/dropDown/DropDown'
 import Post from './NavBar/Post'
 import "./home.css"
@@ -35,40 +35,42 @@ function Home() {
     setDDNotif(false)
     setDDProfil(false)
   }
-   
-  const handle = {'N' : handleDDNotif, 'P' : handleDDProfil, 'C' : handleDDClose}
+
+  const handle = { 'N': handleDDNotif, 'P': handleDDProfil, 'C': handleDDClose }
 
   return (
     <div className='Home' >
 
-        <NavBar 
+      <NavBar
 
-          onClickN={handle['N']}
-          onClickP={handle['P']}
-          onClickC={handle['C']}
-          dDProfil={dDProfil}
+        onClickN={handle['N']}
+        onClickP={handle['P']}
+        onClickC={handle['C']}
+        dDProfil={dDProfil}
 
-          profil={Profil} 
-          notification={Notification}
-          search = {Search}
-          logo= {Logo}
-          down = {Down}
-          up = {up}
+        profil={Profil}
+        notification={Notification}
+        search={Search}
+        logo={Logo}
+        down={Down}
+        up={up}
 
-        ></NavBar>
+      ></NavBar>
 
-        <div className='d-flex HomeBody' >
-            
-            <DropDown section="Notification" value={dDNotif?'translateY(0%)':'translateY(-101%)'}/>
+      <div className='d-flex HomeBody' >
 
-            <DropDown section="Profile" value={dDProfil?'translateY(0%)':'translateY(-101%)'}/>
+        <div className='dropdownContainer'>            
+          <DropDown section="Notification" value={dDNotif ? 'translateY(0px)' : 'translateY(-340px)'} />
 
-          <div className='LeftandPost d-flex' onClick={handle['C']}>
-            <LeftBar></LeftBar>
-            <Post></Post>
-          </div>
-
+          <DropDown section="Profile" value={dDProfil ? 'translateY(0px)' : 'translateY(-340px)'} />
         </div>
+
+        <div className='LeftandPost ' onClick={handle['C']}>
+          <LeftBar></LeftBar>
+          <Post></Post>
+        </div>
+
+      </div>
 
     </div>
   )

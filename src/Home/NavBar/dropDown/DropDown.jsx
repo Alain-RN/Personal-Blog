@@ -1,19 +1,21 @@
+import Notification from "./Section/Notification"
+import Profil from "./Section/Profil"
+import User from "./dropdownAssets/user.png"
 
 
-function DropDown({ section, value}) {
+function DropDown({ section, value }) {
   return (
-    <div className='dropDown bg-dark text-primary' style={{transform: value}}>
-        <h1>{section}</h1>
-        {
-          (section === 'Notification')?
-          <div className="text-center">
-              Notification
+    <div className='dropDown bg-dark' style={{ transform: value }}>
+      {
+        (section === 'Notification') ?
+          <div>
+            <Notification ></Notification>
           </div>
           :
-          <div className="text-center">
-              Profile
+          <div>
+            <Profil userProfil={User}></Profil>
           </div>
-        }
+      }
     </div>
   )
 }

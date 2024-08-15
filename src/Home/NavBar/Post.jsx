@@ -10,8 +10,8 @@ function Post() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam libero voluptate aperiam veritatis minus tenetur id sequi, maiores mollitia esse.
         <div className='containerpost' >
           {/* All pub */}
-          <PublicationCard title={"test title"} picture={pubExemple} description={"Asvbsjb ew w eh sn  dfisfhe"} />
-          <PublicationCard title={"test title"} picture={pubExemple}
+          <PublicationCard title={"title 1"} picture={pubExemple} description={"Asvbsjb ew w eh sn  dfisfhe"} />
+          <PublicationCard title={"title 2"} picture={pubExemple}
             description={"Asvbsjb ew wfd gf rt rrt tj ytjt jtyrt jrtjrjrtr eh sn" +
               "dfisfhefsbrwhr  34y er dfhd hdfhdf  h fdh rthr htrh rth rt hrthfgbcbf " +
               "dfisfhefsbrwhr  34y er dfhd hdfhdf  h fdh rthr htrh rth rt hrthfgbcbf " +
@@ -22,7 +22,7 @@ function Post() {
               "dfisfhefsbrwhr  34y er dfhd hdfhdf  h fdh rthr htrh rth rt hrthfgbcbf "
             }
           />
-          <PublicationCard title={"test title"} picture={pubExemple}
+          <PublicationCard title={"title 3"} picture={pubExemple}
             description={`Lorem ipsum dolor sit amet consectetur adipisicing el
               it. Ipsam libero voluptate aperiam veritatis minus tenetur id sequi, m
               aiores mollitia esse.`
