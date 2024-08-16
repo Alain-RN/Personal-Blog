@@ -60,9 +60,9 @@ function Home() {
       <div className='d-flex HomeBody' >
 
         <div className='dropdownContainer'>            
-          <DropDown section="Notification" value={dDNotif ? 'translateY(0px)' : 'translateY(-340px)'} />
+          <DropDown section="Notification" value={dDNotif ? 'translateY(0px)' : 'translateY(-104%)'} />
 
-          <DropDown section="Profile" value={dDProfil ? 'translateY(0px)' : 'translateY(-340px)'} />
+          <DropDown section="Profile" value={dDProfil ? 'translateY(0px)' : 'translateY(-104%)'} />
         </div>
 
         <div className='LeftandPost ' onClick={handle['C']}>
