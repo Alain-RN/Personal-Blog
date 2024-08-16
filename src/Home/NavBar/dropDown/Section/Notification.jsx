@@ -26,6 +26,12 @@ function Notification() {
             <br />
             <span>4 days ago</span>
           </div>
+          <div className="notifItem">
+          <span className="userNotif">User 1</span> like your comment
+            <br />
+            <span>4 days ago</span>
+          </div>
+          
         </div>
       }
     </div>
