@@ -10,18 +10,24 @@ import { useState } from "react";
 
 function App() {
   const [isLogin, setIsLogin] = useState(true)
+  // step 1: const isLogin = true; // For testing purpose, change this to false to show Signup form.
+  const isTrue = false
 
   const toggleLogin = () => {
     setIsLogin(!isLogin)
   }
   return (
     <div className={"App d-flex align-items-center justify-content-center"}>
-      {false && ((isLogin)?
+      {isTrue && ((isLogin)?
         <Login srcImageProfil={ProfilIcon} viewIcon={ViewIcon} hiddenIcon={HiddenIcon} onClick={toggleLogin}></Login>
       :
         <Signup srcImageAddUser={AddUserIcone} viewIcon={ViewIcon} hiddenIcon={HiddenIcon} onClick={toggleLogin}></Signup>
       )}
-      {<Home></Home>}
+            
+      {
+        // step 2:Comment out Home to only display the login and signup pages 
+        <Home></Home>
+      }
     </div>
   );
 }

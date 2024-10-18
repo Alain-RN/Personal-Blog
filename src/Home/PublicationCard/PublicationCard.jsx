@@ -12,9 +12,7 @@ function PublicationCard({ title, picture, description }) {
 
   const [height, setHeight] = useState(0)
   useEffect(() => {
-    // Vérifie si la référence est définie
     if (textDescription.current) {
-      // Récupère la hauteur du div
       setHeight(textDescription.current.clientHeight);
     }
   }, []);

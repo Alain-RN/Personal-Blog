@@ -23,8 +23,8 @@
 
 .search {
     width: 25vw;
-    height: 38px;
-    border-radius: 12px;
+    height: 40px;
+    border-radius: 8px;
     background-color: #D3D3D3;
     transition: 0.6s ease;
 }
@@ -260,3 +260,23 @@ h1 {
 .imgContainer {
     text-align: center;
 }
+
+
+@media screen and (max-width : 930px){
+    .search {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width : 700px){
+    .search {
+        width: 320px;
+    }
+}
+
+@media screen and (max-width : 600px){
+    .search {
+        width: 240px;
+    }
+}
+  
